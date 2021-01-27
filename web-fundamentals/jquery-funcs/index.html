@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Functions</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!-- Bootstrap -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+        crossorigin="anonymous"
+    >
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
+        crossorigin="anonymous"
+    ></script>
+    <!-- Custom JS -->
+    <script src="./funcs.js"></script>
+    <!-- Custom CSSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="container text-center">
+    <h1>jQuery Functions</h1>
+
+    <div class="row">
+
+        <div class="card col m-3" id="click">
+            <div class="card-body">
+                <h5 class="card-title">.click()</h5>
+                <p class="card-text">Click on me to change my color!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="hide">
+            <div class="card-body">
+                <h5 class="card-title">.hide()</h5>
+                <p class="card-text">Click on me to hide me!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3">
+            <div class="card-body" id="show">
+                <h5 class="card-title">.show()</h5>
+                <p class="card-text">Click on me to show the previous card!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="card col m-3">
+            <div class="card-body" id="toggle">
+                <h5 class="card-title">.toggle()</h5>
+                <p class="card-text">Click on me to toggle this text!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3">
+            <div class="card-body" id="slide-up">
+                <h5 class="card-title">.slideUp()</h5>
+                <p class="card-text">Click on me to slide up the image!</p>
+                <img src="./jQuery.png" height="50px" alt="jQuery logo">
+            </div>
+        </div>
+
+        <div class="card col m-3">
+            <div class="card-body" id="slide-down">
+                <h5 class="card-title">.slideDown()</h5>
+                <p class="card-text">Click on me to slide down the image!</p>
+                <img src="./jQuery.png" height="50px" alt="jQuery logo">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="card col m-3">
+            <div class="card-body" id="slide-toggle">
+                <h5 class="card-title">.slideToggle()</h5>
+                <p class="card-text">Click on me to slide toggle the image!</p>
+                <img src="./jQuery.png" height="50px" alt="jQuery logo">
+            </div>
+        </div>
+
+        <div class="card col m-3" id="fade-out">
+            <div class="card-body">
+                <h5 class="card-title">.fadeOut()</h5>
+                <p class="card-text">Click on me to fade me out!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="fade-in">
+            <div class="card-body">
+                <h5 class="card-title">.fadeIn()</h5>
+                <p class="card-text">Click on me to fade the previous card in!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="card col m-3" id="add-class">
+            <div class="card-body">
+                <h5 class="card-title">.addClass()</h5>
+                <p class="card-text">Click on me to give me the class                    
+                <strong><code>col-5</code></strong>!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="remove-class">
+            <div class="card-body">
+                <h5 class="card-title">.removeClass()</h5>
+                <p class="card-text">Click on me to remove the class                    
+                <strong><code>col-5</code></strong> from the previous card!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="before">
+            <div class="card-body">
+                <h5 class="card-title">.before()</h5>
+                <p class="card-text">Click on me to add something before this paragraph!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="card col m-3" id="after">
+            <div class="card-body">
+                <h5 class="card-title">.after()</h5>
+                <p class="card-text">Click on me to add something after this paragraph!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="prepend">
+            <div class="card-body">
+                <h5 class="card-title">.prepend()</h5>
+                <p class="card-text">Click on me to add something before this text!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="append">
+            <div class="card-body">
+                <h5 class="card-title">.append()</h5>
+                <p class="card-text">Click on me to add something after this text!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="card col m-3" id="html">
+            <div class="card-body">
+                <h5 class="card-title">.html()</h5>
+                <p class="card-text">Click on me to change my HTML so I can be bold!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="css">
+            <div class="card-body">
+                <h5 class="card-title">.css()</h5>
+                <p class="card-text">Click on me to change my CSS so I can be justified!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="text">
+            <div class="card-body">
+                <h5 class="card-title">.text()</h5>
+                <p class="card-text">Click on me to make me all caps!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="card col m-3" id="hover">
+            <div class="card-body">
+                <h5 class="card-title">.hover()</h5>
+                <p class="card-text">Hover over me to change my color!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="attr">
+            <div class="card-body">
+                <h5 class="card-title">.attr()</h5>
+                <p class="card-text">Click on me to see my ID!</p>
+            </div>
+        </div>
+
+        <div class="card col m-3" id="val">
+            <div class="card-body">
+                <h5 class="card-title">.val()</h5>
+                <p class="card-text">Click on me to see the current value of the Dropdown!</p>
+                <select value="">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe-so">Maybe So</option>
+                </select>
+                <span><br></span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

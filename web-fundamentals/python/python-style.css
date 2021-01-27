@@ -1,0 +1,129 @@
+body {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial';
+}
+
+.black {
+    color: black;
+}
+.zen {
+    font-size: 20px;
+}
+.zen-yellow {
+    color: rgb(219, 219, 11);
+    font-size: 20px;
+}
+
+#header-wrapper {
+    background-color: rgb(44, 72, 124);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    text-align: right;
+}
+header form {
+    background-color: rgb(56, 56, 56);
+    padding: 15px 40px;
+    border-radius: 10px;
+}
+header button {
+    background-color: rgb(44, 72, 124);
+    color: white;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+}
+header input {
+    padding: 7px;
+    text-align: center;
+}
+header a {
+    color: rgb(219, 219, 11);
+}
+header p {
+    margin: 5px 50px 5px 0px;
+}
+header img {
+    height: 120px;
+}
+
+nav {
+    background-color:rgb(70, 107, 175);
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    margin: auto;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+#about {
+padding: 10px 30px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+#about ul {
+    padding-top: 20px;
+    font-size: 18px;
+    list-style-position: inside;
+}
+#about li {
+    margin: 10px 0px;
+    padding: 0;
+}
+#about p {
+    width: 70%;
+}
+
+#main {
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 150px;
+}
+#main article {
+    width: 45%;
+    text-align: center;
+    margin-top: 10px;
+    border-top: 5px solid rgb(44, 72, 124);
+    font-size: 13px;
+}
+#main article p {
+    width: 70%;
+    margin: auto;
+}
+#main a {
+    text-decoration: none;
+    color:rgb(98, 184, 218);
+}
+#main ul {
+    margin: 10px auto 20px auto;
+    width: 60%;
+}
+
+footer {
+    background-color: rgb(44, 72, 124);
+    text-align: center;
+    padding: 3px 150px;
+}
+footer div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+footer p {
+    margin: 15px 0 5px 0;
+    color:rgb(98, 184, 218);
+    font-size: 10px;
+}
+footer a {
+    text-decoration: none;
+    color:rgb(98, 184, 218);
+}

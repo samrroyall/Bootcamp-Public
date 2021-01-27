@@ -1,0 +1,11 @@
+.card-title {
+    color: slateblue;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+.card {
+    cursor: pointer;
+}
+#slide-down img, #slide-toggle img {
+    display: none;
+}

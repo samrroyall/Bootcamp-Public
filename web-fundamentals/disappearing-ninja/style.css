@@ -1,0 +1,7 @@
+img { 
+    cursor: pointer; 
+} 
+.row {
+    max-height: 300px;
+    margin-bottom: 15px;
+}

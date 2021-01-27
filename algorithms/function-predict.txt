@@ -1,0 +1,24 @@
+#1
+
+T-Diagram:
+ word | "Hello"
+
+Console:
+ "Hello" 
+
+#2
+
+T-Diagram:
+ result1 | 8
+ result2 | 11
+
+Console:
+ "Summing Numbers!","num1 is: 3","num is: 5",8,"Summing Numbers!","num1 is: 4","num is: 7",11
+
+#3
+T-Diagram:
+
+Console:
+
+^The function is never called, so there will be no output
+ 

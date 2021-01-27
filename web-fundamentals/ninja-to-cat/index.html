@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja2Cat</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+        img {
+            margin: 10px;
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(document).ready( function () {
+            $("img").click( function () {
+                var temp = $(this).attr("src");
+                console.log(temp);
+                $(this).attr("src", $(this).attr("alt-src"));
+                $(this).attr("alt-src", temp);
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="./img/ninja0.png" alt-src="./img/cat0.png" alt="image 1">    
+    <img src="./img/ninja1.png" alt-src="./img/cat1.png" alt="image 2">    
+    <img src="./img/ninja2.png" alt-src="./img/cat2.png" alt="image 3">    
+    <img src="./img/ninja3.png" alt-src="./img/cat3.png" alt="image 4">    
+    <img src="./img/ninja4.png" alt-src="./img/cat4.png" alt="image 5">    
+</body>
+</html>

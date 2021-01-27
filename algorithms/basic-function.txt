@@ -1,0 +1,117 @@
+#1
+
+T-Diagram:
+
+Console:
+  35
+
+#2
+T-Diagram:
+
+Console:
+  8
+
+#3
+T-Diagram:
+
+Console:
+  6
+
+#4
+T-Diagram:
+ b    | 3
+ a(b) | 9
+
+Console:
+  3,9
+
+#5
+T-Diagram:
+ b    | 10
+ a(b) | 40
+
+Console:
+  40
+
+#6
+T-Diagram:
+ b    | 15
+ a(b) | 4
+
+Console:
+  4
+
+#7
+T-Diagram:
+ b      | 3
+ c      | 10
+ a(b,c) | 30
+
+Console:
+  10 3,30
+
+#8
+T-Diagram:
+  ...
+
+Console:
+  3,4
+
+#9
+T-Diagram:
+  i | 0,2,3,5,6,8,7,9
+
+Console:
+  2,5,8,9
+
+#10
+T-Diagram:
+ b      | 0,0
+ c      | 10,10
+ a(b,c) | 0,0
+
+Console:
+ 0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0
+
+#11
+T-Diagram:
+...
+
+Console:
+...
+
+^Function never called, no output
+
+#12
+T-Diagram:
+...
+
+Console:
+...
+
+^Function never called, no output
+
+#13
+T-Diagram:
+ z | 10
+
+Console:
+ 10
+
+#14
+T-Diagram:
+ z   | 10
+ a:z | 15
+
+Console:
+ 15,10
+
+#15
+T-Diagram:
+ z    | 10,15
+ a:z  | 15
+ a(z) | 15
+
+Console:
+ 15,15
+

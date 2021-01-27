@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(12, 90, 139);
+    color: lightblue;
+}
+
+a {
+    color: cyan;
+}
+
+ul {
+    margin-top: 0;
+    margin-left: 20px;
+    padding: 0;
+}
+
+code {
+    font-family: 'Times New Roman';
+    color: slateblue;
+}
+
+h1 {
+    background-color: red;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+navbar {
+    background-color: teal;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+article {
+    background-color: black;
+    width: 680px;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+footer {
+    background-color: grey;
+    padding: 20px;
+    border-radius: 20px;
+}

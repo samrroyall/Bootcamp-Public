@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Blocks</title>
+    <!-- load Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body class="container text-light text-center">
+    <!-- Grey Header -->
+    <header class="row bg-dark mb-3 p-2">
+        <div class="col-4 offset-4 bg-info p-1 my-4">Header</div>
+    </header>
+
+    <!-- Aside and Main -->
+    <div class="row mb-3">
+        <aside 
+            class="col-5 bg-info mr-2 pt-5" 
+            style="height:300px;"
+        >
+            Aside
+        </aside>
+        <main 
+            class="col container bg-warning ml-2 pt-5"
+            style="height:400px;"
+        >
+            Main
+            <div class="row mt-4">
+                <article 
+                    class="col bg-light ml-2 mr-1 pt-4 text-dark"
+                    style="height:300px;"
+                >
+                    Article
+                </article>
+                <article 
+                    class="col bg-light ml-1 mr-2 pt-4 pt-4 text-dark"
+                >
+                    Article
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <footer class="row bg-success py-2">
+        <div class="col">Footer</div>
+    </footer>
+</body>
+</html>
