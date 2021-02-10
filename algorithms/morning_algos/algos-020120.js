@@ -20,3 +20,4 @@ function returnOddsArray1To255() {
 }
 // Create an array with all the odd integers between 1 and 255 (inclusive)
 // Sean Johnson, Skylar Rivas, Sam Royall
+console.log(returnOddsArray1To255());

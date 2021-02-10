@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename="style.css") }}" />
+    <title>Checkerboard</title>
+    <style>
+        .first-color {
+            background-color: {{color_one}};
+        }
+        .second-color {
+            background-color: {{color_two}};
+        }
+    </style>
+</head>
+<body>
+    <h2>{{rows}}x{{cols}} Checkerboard</h2>
+    {% for i in range(rows) %}
+        <div class="row">
+        {% for j in range(cols) %}
+            {% if i%2 == 0 and j%2 == 0 %}
+                <div class="cell first-color"></div>
+            {% elif i%2 == 1 and j%2 == 1 %}
+                <div class="cell first-color"></div>
+            {% else %}
+                <div class="cell second-color"></div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>

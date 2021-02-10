@@ -1,0 +1,18 @@
+`pip list`:
+> lists all packages installed with their version numbers
+`pip3 list`:
+>  did the same thing as `pip list` for me
+`deactivate`:
+> deactivates your virtual environment
+`source myEnvironments/py3Env/bin/activate`:
+> reactivates your virtual environment
+`pip install Django==2.2.4`:
+> installs Django 2
+`pip freeze`:
+> like pip list but does not print pip or setuptools
+`pip freeze > requirements.txt`:
+> writes output of `pip freeze` to file requirements.txt
+`pip uninstall Django`:
+> uninstalls Django
+`pip show Django`:
+> says packages not found
