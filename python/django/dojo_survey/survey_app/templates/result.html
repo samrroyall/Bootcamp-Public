@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <h1>Survey Results</h1>
+    <div id="results">
+        <p><strong>Your Name:</strong><span>{{name}}</span></p>
+        <p><strong>Dojo Location:</strong><span>{{location}}</span></p>
+        <p><strong>Favorite Language:</strong><span>{{language}}</span></p>
+        <p><strong>Comment:</strong><span>{{comment}}</span></p>
+        <a class="button" href="/">Go Back</a>
+    </div>
+</body>
+</html>

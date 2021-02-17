@@ -1,0 +1,39 @@
+* {
+    border: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 100%;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+a {text-decoration: none;}
+
+h1 { font-size: 60px; }
+
+form, div#results{
+    margin: 50px auto;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+form p, div#results p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+input, select, textarea, a.button { border: 1px solid black; }
+
+input, select, textarea, a.button, div#results p span {
+    border-radius: 3px;
+    padding: 3px; 
+    margin-left: 50px;
+}
+
+a.button, input[type=submit] { 
+    margin-left: auto; 
+    font-weight: bold;
+    cursor: pointer;
+}

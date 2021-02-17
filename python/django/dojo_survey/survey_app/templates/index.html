@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+        <h1>Coding Dojo Survey</h1>
+        <form action="/result" method="post">
+            {% csrf_token %}
+            <p> <strong>Your Name:</strong> 
+                <input type="text" name="name" />
+            </p>
+            <p> <strong>Dojo Location:</strong>
+                <select name="location">
+                    <option>New York</option>
+                    <option>Chicago</option>
+                    <option>Los Angeles</option>
+                </select>
+            </p>
+            <p> <strong>Favorite Language:</strong>
+                <select name="language">
+                        <option>C</option>
+                        <option>Python</option>
+                        <option>Javascript</option>
+                </select>
+            </p>
+            <p> <strong>Comment (optional):</strong> 
+                <textarea name="comment" rows="3" cols="25"></textarea>
+            </p>
+            <p><input type="submit" /></p>
+        </form>
+</body>
+</html>

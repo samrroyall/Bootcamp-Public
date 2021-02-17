@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" 
+        crossorigin="anonymous"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    >
+</head>
+<body>
+    <main>
+        <h1 class="text-center">Dojo Survey</h1>
+        <form class="border rounded m-4 p-4 text-center" 
+            action="/result" 
+            method="post"
+        >
+            <div class="form-group row">
+                <label for="nameInput" class="col-2 col-form-label">
+                    Your Name:
+                </label>
+                <input id="nameInput" 
+                    name="name"
+                    class="col-9 form-control" 
+                    placeholder="Your name here..."
+                />
+            </div>
+            <div class="form-group row">
+                <label for="dojoLocation" class="col-2 col-form-label">
+                    Dojo Location:
+                </label>
+                <select id="dojoLocation" 
+                    class="col-9 form-control"
+                    name="location"
+                >
+                    <option>Atlanta</option>
+                    <option>Chicago</option>
+                    <option>Dallas</option>
+                    <option>Los Angeles</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="favLanguage" class="col-2 col-form-label">
+                    Favorite Language:
+                </label>
+                <select id="favLanguage" 
+                    class="col-9 form-control"
+                    name="language"
+                >
+                    <option>C</option>
+                    <option>C++</option>
+                    <option>C#</option>
+                    <option>Java</option>
+                    <option>JavaScript</option>
+                    <option>TypeScript</option>
+                    <option>Python</option>
+                    <option>Rust</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="commentArea" class="col-2 col-form-label">
+                    Comment (optional):
+                </label>
+                <textarea id="commentArea" 
+                    class="col-9 form-control" 
+                    name="comment"
+                    rows="3"
+                    placeholder="Leave a comment if you please..."
+                ></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

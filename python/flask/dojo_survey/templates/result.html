@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" 
+        crossorigin="anonymous"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    >
+</head>
+<body>
+    <main>
+        <h1 class="text-center">Submission Received!</h1>
+        <div class="m-4 p-4 border rounded text-center">
+            <p><h3>Name:</h3> {{results["name"]}}</p>
+            <p><h3>Location:</h3> {{results["location"]}}</p>
+            <p><h3>Favorite Language:</h3> {{results["language"]}}</p>
+            <p><h3>Comment:</h3> {{results["comment"]}}</p>
+            <a class="btn btn-primary" href="/">Go Back</a>
+        </div>
+    </main>
+</body>
+</html>
