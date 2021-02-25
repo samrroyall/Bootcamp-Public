@@ -1,0 +1,9 @@
+<nav>
+    <div id="brand">CodingDojo Wall</div>
+    <div id="wallNavRest">
+        {% if first_name %}
+            <span id="welcomeMessage">Welcome {{ first_name }}</span>
+            <a href="/login/logout">log off</a>
+        {% endif %}
+    </div>
+</nav>

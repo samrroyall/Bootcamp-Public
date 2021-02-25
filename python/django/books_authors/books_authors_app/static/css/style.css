@@ -1,0 +1,52 @@
+* { 
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    font-size: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 { 
+    margin-bottom: 30px;
+    display: inline-block;
+    font-size: calc(30px + 1vw); 
+}
+
+main {
+    width: 100%;
+    display: flex;
+}
+
+section#formWrapper, section#listWrapper {
+    width: calc(50% - 100px);
+    padding: 50px;
+}
+
+input, textarea {
+    padding: 5px;
+}
+
+label {
+    display: block;
+    margin: 15px 0;
+}
+
+label div {
+    display: inline-block;
+    width: 100px;
+}
+
+table {
+    margin: 50px auto;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}

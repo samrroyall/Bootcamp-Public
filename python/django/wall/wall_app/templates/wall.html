@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall Assignment - advanced version</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/wall.css' %}">
+    <link rel="stylesheet" href="{% static 'css/wall_nav.css' %}">
+</head>
+<body>
+    {% include 'wall_nav.html' %}
+    <main>
+        <form id="messageForm" action="/post_message" method="post">
+            {% csrf_token %}
+            <label for="messageInput">
+                <span>Post a message</span><br/>
+                <textarea id="messageInput" rows="5" name="message"></textarea>
+            </label><br/>
+            <input type="submit" value="Post a message">
+        </form>
+
+        {% for msg in all_messages %}
+            <section class="block">
+                <h4 class="title">
+                    {{msg.user_id.first_name}} {{msg.user_id.last_name}} - {{msg.created_at}}
+                </h4>
+                <p class="body">{{msg.message}}</p>
+                {% if msg.user_id.email == userid and msg.age < 30 %}
+                    <form class="deleteMessageForm" action="/delete_message" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="message_id" value="{{msg.id}}">
+                        <input type="submit" value="Delete message">
+                    </form>
+                {% endif %}
+                {% for cmnt in msg.comments.all %}
+                    <section class="block">
+                        <h4 class="title">
+                            {{cmnt.user_id.first_name}} {{cmnt.user_id.last_name}} - {{cmnt.created_at}}
+                        </h4>
+                        <p class="body">{{cmnt.comment}}</p>
+                        </form>
+                    </section>
+                {% endfor %}
+                <form class="commentForm" action="/post_comment" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="message_id" value="{{msg.id}}">
+                    <label for="commentInput">
+                        <span>Post a comment</span><br/>
+                        <textarea id="commentInput" rows="5" name="comment"></textarea>
+                    </label><br/>
+                    <input type="submit" value="Post a comment">
+                </form>
+            </section>
+        {% endfor %}
+    </main>
+</body>
+</html>

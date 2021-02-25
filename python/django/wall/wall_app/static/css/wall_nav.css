@@ -1,0 +1,29 @@
+nav {
+    width: calc(100% - 40px);
+    border-bottom: 3px solid black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div#brand {
+    width: 30%;
+    font-size: calc(14px + 1vw);
+    font-weight: bold;
+}
+
+nav div#wallNavRest {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav span#welcomeMessage {
+    margin-right: 8%; 
+    display: inline-block;
+    font-weight: bold;
+}
+nav a#logout {
+    display: inline-block;
+}

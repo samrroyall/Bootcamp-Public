@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Update</title>
+</head>
+<body>
+    <nav>
+        <h1>Edit Show {{show.id}}</h1>
+        <a href="/shows">Go Back</a>
+    </nav>
+    {% if messages %}
+        <ul class="messages">
+            {% for m in messages %}
+                <li {% if m.tags %} class="{{m.tags}}" {% endif %}>{{m}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="/shows/{{show.id}}/update" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="which_form" value="edit">
+        <label for="title">
+            Title <br/>
+            <input type="text" name="title" id="title" placeholder="{{show.title}}">
+        </label><br/>
+        <label for="network">
+            Network <br/>
+            <input type="text" name="network" id="network" placeholder="{{show.network}}">
+        </label><br/>
+        <label for="release_date">
+            Release Date <br/>
+            <input type="date" name="release_date" id="release_date">
+        </label><br/>
+        <label for="desc">
+            Description <br/>
+            <textarea name="desc" id="desc" cols="30" rows="5" placeholder="{{show.description}}"></textarea>
+        </label><br/>
+        <input type="submit" vlue="Update"><br/>
+    </form>
+    <a href="/shows/{{show.id}}">Go to Show</a>
+</body>
+</html>

@@ -1,0 +1,59 @@
+from books_authors_app.models import Book, Author
+
+c_sharp_book = Book.objects.create(title="C Sharp")
+java_book = Book.objects.create(title="Java")
+python_book = Book.objects.create(title="Python")
+php_book = Book.objects.create(title="PHP")
+ruby_book = Book.objects.create(title="Ruby")
+
+austen_author = Author.objects.create(first_name="Jane", last_name="Austen")
+dickinson_authors = Author.objects.create(first_name="Emily", last_name="Dickinson")
+dostoyevsky_author = Author.objects.create(first_name="Fyodor", last_name="Dostoyevsky")
+shakespeare_author = Author.objects.create(first_name="William", last_name="Shakespeare")
+tzu_author = Author.objects.create(first_name="Lau", last_name="Tzu")
+
+c_sharp_book.name = "C#"
+c_sharp_book.save()
+
+shakespeare_author = Author.objects.get(id=4)
+shakespeare_author.first_name = "Bill"
+shakespeare_author.save()
+
+author1 = Author.objects.get(id=1)
+author1.books.add( Book.objects.get(id=1) )
+author1.books.add( Book.objects.get(id=2) )
+author1.save()
+
+author2 = Author.objects.get(id=2)
+author2.books.add( Book.objects.get(id=1) )
+author2.books.add( Book.objects.get(id=2) )
+author2.books.add( Book.objects.get(id=3) )
+author2.save()
+
+author3 = Author.objects.get(id=3)
+author3.books.add( Book.objects.get(id=1) )
+author3.books.add( Book.objects.get(id=2) )
+author3.books.add( Book.objects.get(id=3) )
+author3.books.add( Book.objects.get(id=4) )
+author3.save()
+
+author4 = Author.objects.get(id=4)
+for book in Book.objects.all():
+  author4.books.add(book)
+author4.save()
+
+book3 = Book.objects.get(id=3)
+book3.authors.all()
+book3.authors.remove( 
+  book3.authors.first()
+)
+book3.save()
+
+book2 = Book.objects.get(id=2)
+book2.authors.add(
+  Author.objects.get(id=5)
+)
+book2.save()
+
+Author.objects.get(id=3).books.all()
+Book.objects.get(id=5).authors.all()

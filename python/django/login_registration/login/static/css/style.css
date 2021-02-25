@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    font-size: 100%;
+}
+
+nav {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 30px 0;
+    display: block;
+    font-size: calc(30px + 1vw);
+}
+
+body, main {
+    width: 100%;
+}
+
+nav ul.messages {
+    margin: 20px auto;
+    color: red;
+    text-align: center;
+    list-style-type: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    padding: 30px;
+    margin: 0 10%;
+}
+
+form p {
+    font-weight: bold;
+}
+
+input { padding: 5px; }
+
+label {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+form h1 { margin: 30px auto; }
+
+input[type='submit'] {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+p#welcomeMessage {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,8 +1,8 @@
 class ListNode {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
 }
 
 function createList(vals) {
@@ -20,7 +20,6 @@ function createList(vals) {
     return head;
 }
 
-// display the values in the list: "6 - 1 - 2 - 5 - 7 - 9" 
 function display(head) {
     let list_string = "";
     let runner = head;
@@ -33,7 +32,8 @@ function display(head) {
     }
     return list_string;
 }
-function removeFront(head) {
+
+function removeFront1(head) {
     // if list is empty or contains one element, return null
     if (head === null || head.next === null) {
         return null;
@@ -52,7 +52,7 @@ function removeBack(head) {
     }
     // traverse until runner points to second to last node
     let runner = head;
-    while (runner.next.next !== null) {
+    for (runner; runner.next.next !== null; ) {
         runner = runner.next;
     }
     runner.next = null; // remove reference to last node

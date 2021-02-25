@@ -1,0 +1,113 @@
+$> from dojo_ninjas_app.models import *
+
+$> Dojo.objects.create(
+	name="Chicago Dojo",
+	city="Chicago",
+	state="IL",
+)
+$> Dojo.objects.create(
+	name="Dallas Dojo",
+	city="Dallas",
+	state="TX",
+)
+$> Dojo.objects.create(
+	name="LA Dojo",
+	city="Los Angeles",
+	state="CA",
+)
+
+$> Dojo.objects.all().delete()
+
+$> Dojo.objects.create(
+	name="Chicago Dojo 2",
+	city="Chicago",
+	state="IL",
+)
+$> Dojo.objects.create(
+	name="Dallas Dojo 2",
+	city="Dallas",
+	state="TX",
+)
+$> Dojo.objects.create(
+	name="LA Dojo 2",
+	city="Los Angeles",
+	state="CA",
+)
+
+$> Dojo.objects.create(
+	name="Chicago Dojo 2",
+	city="Chicago",
+	state="IL",
+)
+$> Dojo.objects.create(
+	name="Dallas Dojo 2",
+	city="Dallas",
+	state="TX",
+)
+$> Dojo.objects.create(
+	name="LA Dojo 2",
+	city="Los Angeles",
+	state="CA",
+)
+
+$> chicago_dojo = Dojo.objects.get(name="Chicago Dojo 2")
+$> Ninja.objects.create(
+	dojo_id=chicago_dojo,
+	first_name="Chicago Ninja",
+	last_name="#1"
+)
+$> Ninja.objects.create(
+	dojo_id=chicago_dojo,
+	first_name="Chicago Ninja",
+	last_name="#2"
+)
+$> Ninja.objects.create(
+	dojo_id=chicago_dojo,
+	first_name="Chicago Ninja",
+	last_name="#3"
+)
+
+$> dallas_dojo = Dojo.objects.get(name="Dallas Dojo 2")
+$> Ninja.objects.create(
+	dojo_id=dallas_dojo,
+	first_name="Dallas Ninja",
+	last_name="#1"
+)
+$> Ninja.objects.create(
+	dojo_id=dallas_dojo,
+	first_name="Dallas Ninja",
+	last_name="#2"
+)
+$> Ninja.objects.create(
+	dojo_id=dallas_dojo,
+	first_name="Dallas Ninja",
+	last_name="#3"
+)
+
+$> la_dojo = Dojo.objects.get(name="LA Dojo 2")
+$> Ninja.objects.create(
+	dojo_id=la_dojo,
+	first_name="LA Ninja",
+	last_name="#1"
+)
+$> Ninja.objects.create(
+	dojo_id=la_dojo,
+	first_name="LA Ninja",
+	last_name="#2"
+)
+$> Ninja.objects.create(
+	dojo_id=la_dojo,
+	first_name="LA Ninja",
+	last_name="#3"
+)
+
+$> chicago_dojo.ninjas
+$> la_dojo.ninjas
+$> Ninja.objects.last().dojo_id
+
+$> Dojo.objects.create(
+  name="Seattle Dojo",
+  city="Seattle",
+  state="WA",
+  desc="This is the Seattle dojo",
+)

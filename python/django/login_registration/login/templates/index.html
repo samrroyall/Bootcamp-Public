@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        {% if messages %}
+            <ul class="messages">
+                {% for m in messages %}
+                    <li {% if m.tags %} class="{{m.tags}}" {% endif %}>{{m}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </nav>
+    <main>
+        <form id="regisrationForm" action="/register" method="post">
+            <h1>Registration</h1>
+            {% csrf_token %}
+            <input type="hidden" name="which_form" value="registration">
+            <label for="first_name">
+                <p>First Name</p>
+                <input type="text" name="first_name" id="first_name">
+            </label><br/>
+            <label for="last_name">
+                <p>Last Name</p>
+                <input type="text" name="last_name" id="last_name">
+            </label><br/>
+            <label for="birthdate">
+                <p>Birthdate</p>
+                <input type="date" name="birthdate" id="birthdate">
+            </label><br/>
+            <label for="email">
+                <p>Email</p>
+                <input type="text" name="email" id="email">
+            </label><br/>
+            <label for="password">
+                <p>Password</p>
+                <input type="password" name="password" id="password">
+            </label><br/>
+            <label for="confirm_password">
+                <p>Confirm PW</p>
+                <input type="password" name="confirm_password" id="confirm_password">
+            </label><br/>
+            <input type="submit" value="Register">
+        </form>
+        <form id="loginForm" action="/login" method="post">
+            <h1>Login</h1>
+            {% csrf_token %}
+            <input type="hidden" name="which_form" value="login">
+            <label for="email">
+                <p>Email</p>
+                <input type="text" name="email" id="email">
+            </label><br/>
+            <label for="password">
+                <p>Password</p>
+                <input type="password" name="password" id="password">
+            </label><br/>
+            <input type="submit" value="Log In">
+        </form>
+    </main>
+</body>
+</html>
